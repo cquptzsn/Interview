@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣杯布局</title>
+    <style type="text/css">
+        body {
+            min-width: 550px;
+        }
+        #header {
+            text-align: center;
+            background-color: #f1f1f1;
+        }
+        #container {
+            width: '100%';
+            padding-left: 200px;
+            padding-right: 150px;
+            background-color: green;
+        }
+        #container .column {
+            float: left;
+        }
+        #center {
+            background-color: #ccc;
+            width: 100%;
+        }
+        #left {
+            background-color: yellow;
+            width: 200px;
+            margin-left: -100%; /*和 center 左侧重叠 */
+            position: relative;
+            right: 200px; /*相对定位，往左移动自己宽度的身位*/
+        }
+        #right {
+            background-color: red;
+            width: 150px;
+            margin-right: -150px; /* 与宽度相等，在外界看来自身就没有宽度了，理所应当的移动到 center 右边 */
+        }
+        #footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            clear: both; /*清除只有浮动，单独一行 */
+        }
+    </style>
+</head>
+<body>
+    <div id="header">header</div>
+    <div id="container">
+        <div id="center" class="column">this is center</div>
+        <div id="left" class="column">this is left</div>
+        <div id="right" class="column">this is right</div>
+    </div>
+    <div id="footer">footer</div>
+</body>
+</html>
