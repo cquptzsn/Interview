@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            min-width: 550px;
+        }
+        .column {
+            float: left;
+        }
+        .main {
+            height: 200px;
+            width: 100%;
+            background-color: #ccc;
+        }
+        .main-wrap {
+            margin: 0 190px 0 190px;
+        }
+        .left {
+            width: 190px;
+            height: 200px;
+            background-color: bisque;
+            margin-left: -100%;
+        }
+        .right {
+            width: 190px;
+            height: 200px;
+            background-color: aquamarine;
+            margin-left: -190px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main column">
+        <div class="main-wrap">this is main</div>
+    </div>
+    <div class="left column">this is left</div>
+    <div class="right column">this is right</div>
+</body>
+</html>
